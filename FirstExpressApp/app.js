@@ -19,3 +19,6 @@ app.get("/dog", function (request, response) {
 app.listen(3000, process.env.IP, function () {
     console.log("Server has started!!!");
 });
+
+//npm install (package_name) --save
+//This will install the dependencies
