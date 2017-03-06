@@ -15,7 +15,7 @@ app.get("/bye", function (request, response) {
 
 app.get("/dog", function (request, response) {
     console.log("Someone made a request to /dog");
-    response.send("Woof!")
+    response.send("Woof!");
 });
 
 //Pattern matching, will try to match a route after /r/..
@@ -27,7 +27,7 @@ app.get("/r/:subredditName", function (request, response) {
 
 //Further limitations of pattern matching, following /
 app.get("/r/:subredditName/comments/:id/:title/", function (request, response) {
-    response.send("WELCOME TO THE COMMENTS PAGE!")
+    response.send("WELCOME TO THE COMMENTS PAGE!");
 });
 
 //ERROR or route that is not expected, "PAGE NOT FOUND"
