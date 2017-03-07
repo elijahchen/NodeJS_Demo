@@ -3,9 +3,11 @@ var app = express();
 
 //Tells express to serve this directory
 app.use(express.static("public"));
+//Tells express to automatically include .ejs extensions
+app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {
-    res.render("home.ejs");
+    res.render("home");
 });
 
 app.get("/posts", function (req, res) {
@@ -20,7 +22,7 @@ app.get("/posts", function (req, res) {
 
 app.get("/fallinlovewith/:thing", function (req, res) {
     var thing = req.params.thing;
-    res.render("love.ejs", {thingVar: thing});
+    res.render("love", {thingVar: thing});
 });
 
 app.listen(3000, process.env.IP, function () {

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="app.css">
+<% include partials/header %>
 
 <!--Needs to be instantiated within the .render method of the response call-->
 <h1>You fell in love with: <%= thingVar %></h1>
@@ -9,3 +9,5 @@
 <% } %>
 
 <p>This is coming from the love.ejs (Embedded JavaScript) file!</p>
+
+<% include partials/footer %>
