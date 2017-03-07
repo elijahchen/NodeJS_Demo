@@ -18,6 +18,19 @@ app.get("/speak/:animalName", function (req, res) {
     res.send("The " + animal + " says, \"" + sound + "\"");
 });
 
+app.get("/repeat/:repeatThis/:numTimes", function (req, res) {
+    var mStr = req.params.repeatThis;
+    var mNum = Number(req.params.numTimes);
+    var totalStr = "";
+    for (var i = 0; i < mNum; i++) {
+        if (i !== 0 && i < mNum) {
+            totalStr += " ";
+        }
+        totalStr += mStr;
+    }
+    res.send(totalStr);
+});
+
 app.get("*", function (req, res) {
     res.send("Sorry, page not found... What are you doing with your life?");
 });
