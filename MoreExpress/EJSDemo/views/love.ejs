@@ -1,4 +1,9 @@
 <!--Needs to be instantiated within the .render method of the response call-->
 <h1>You fell in love with: <%= thingVar %></h1>
+<% if(thingVar.toLowerCase() === "peace"){ %>
+    <p>GOOD FOR YOU!</p>
+<% } else { %>
+    <p>WHAT ABOUT WORLD PEACE?</p>
+<% } %>
 
 <p>This is coming from the love.ejs (Embedded JavaScript) file!</p>
