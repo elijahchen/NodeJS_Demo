@@ -1,6 +1,9 @@
 var express = require("express");
 var app = express();
 
+//Tells express to serve this directory
+app.use(express.static("public"));
+
 app.get("/", function (req, res) {
     res.render("home.ejs");
 });
